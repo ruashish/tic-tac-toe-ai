@@ -48,3 +48,27 @@ const checkWinner = () => {
   if (winner == null && emptyCell == 0) return "tie";
   return winner;
 };
+
+const changePlayer = (aiSign, humanSign) => {
+  console.log("i");
+  ai = aiSign;
+  human = humanSign;
+
+  if (ai === "X") {
+    currentPlayer = ai;
+  } else {
+    currentPlayer = human;
+  }
+};
+
+const playerHighlighter = (playerId) => {
+  document.getElementById(playerId).style.filter = "grayscale(1)";
+};
+
+const startMatch =() =>{
+  console.log("a");
+  if(matchEnded){
+    matchEnded = false;
+    bestMove();
+  }
+}

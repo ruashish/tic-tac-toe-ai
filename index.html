@@ -13,8 +13,13 @@
 
 <body>
     <div class="player-card" id="human">
+        
         <h2>You</h2>
         <div id="human-score" class="gradient-text">0</div>
+        <div>
+            <button onclick="changePlayer('O','X')" id="human-x">X</button> 
+            <button id="human-o">O</button>
+        </div>
     </div>
 
     <div>
@@ -35,7 +40,7 @@
             <div class="div14 separator"></div>
             <div class="div15 separator"></div>
         </div>
-        <button id="start">Start</button>
+        <button onclick="startMatch()" id="start">Start</button>
     </div>
 
     <div class="player-card" id="ai">
