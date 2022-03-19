@@ -4,9 +4,9 @@ var board = [
   ["", "", ""],
 ];
 
-let ai = "O";
-let human = "X";
-let currentPlayer = human;
+let ai = "X";
+let human = "O";
+let currentPlayer = ai;
 let matchEnded = false;
 
 const clickEventHandler = (event) => {
@@ -21,11 +21,8 @@ const clickEventHandler = (event) => {
         currentPlayer = ai;
       }
       bestMove();
-      console.log(board.toString());
       checkWinner();
       currentPlayer = human;
-
-      console.log(checkWinner());
       winner = checkWinner();
       if (winner !== null) matchEnded = true;
     }
